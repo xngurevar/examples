@@ -13,12 +13,12 @@
 |%
 ++  iip
   |=  [n=@ primes=(list ,@)]
-  =+  [c=0 lim=p:(sqt n)]
+  =+  c=0
   |-  ^-  @f
   =+  p=(snag c primes)
   ?:  =(0 (mod n p))
     %.n
-  ?:  (gth p lim)
+  ?:  (gth (mul p p) n)
     %.y
   $(c +(c))
 ::
